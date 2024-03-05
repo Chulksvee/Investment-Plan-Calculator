@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Ivestment Plan Calculator</title>
+</head>
+<body>
+    
+
+  <div class="container">
+
+
+    <div style="margin-left: 200px; margin-top: 50px;" class="button">
+
+            <h2 style="color: rgb(255, 255, 255); font-family: poppins; ">Please click and put in your desired investment 
+                capital for Chief_Vee Groups of Company.</h2>
+
+        <button id="calculatedbutton" style="font-size: 20px;">Calculate Investment</button>
+           
+               
+
+    </div>
+
+
+
+  </div>
+
+
+  <!-- here is the css -->
+  <style>
+
+    body{
+        background: linear-gradient(45deg, #08001f, #30197d);
+    }
+   
+
+  </style>
+
+
+
+
+
+
+
+ <!-- My js starts here -->
+
+  <script>
+
+  //for the button
+    const calculatedbutton = document.getElementById('calculatedbutton')
+      console.log(calculatedbutton)
+
+
+      //for the function
+      //for investment
+        calculatedbutton.onclick = () => {
+            const investment = parseFloat(prompt("please enter your desired investment"))
+                console.log (`your investment is ${investment}`)
+
+                    //for PROFIT (using 10% interest on investment)
+                        const profit = (investment * 0.1)
+                            alert(`profit ${profit}`)
+                                console.log(`profit ${profit}`)
+
+    //for vat (using 2% of VAT, Value Added Tax)
+            const vat = (investment * 0.02)
+                alert(`vat ${vat}`)
+                    console.log (`vat ${vat}`)
+
+                        //total earnings after tax
+                            var earnings = (profit - vat)
+                                alert(`earnings ${earnings}`)
+                                    console.log(`earnings ${earnings}`)
+
+                                        //for total revenue befor tax
+                                            var total_revenue = (investment + earnings)
+                                                alert(`total_revenue ${total_revenue}`)
+                                                    console.log(`total_revenue ${total_revenue}`)
+
+
+                                                    // Math.round(total_revenue)
+
+
+        }
+        
+                   
+  
+  </script>
+
+</body>
+</html>
